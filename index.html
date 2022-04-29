@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiro 🐾</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <!-- estilos -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <!-- nav bar -->
+            <div class="barra">
+                <div>
+                    <div class="logo">
+                        <a href="index.html"><h1><i class="fas fa-paw"></i> Kiro 🐾 </h1></a>
+                    </div>
+                    <nav class="nav">
+                        <a href="#">Inicio</a>
+                        <a href="#sobre_mi">Sobre Mi</a>
+                        <a href="#galeria">Galeria</a>
+                        <a href="https://www.instagram.com/Kiro_wolfdog/" class="redes_sociales--enlace" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- hero -->
+
+            <div class="hero">
+                <div class="hero__text">
+                    <ul>
+                        <li>Furro</li>
+                        <li>Lobo-perro</li>
+                        <li>Un artista con grandes sueños</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- galeria -->
+        <section id="galeria">
+            <div>
+                <h2 class="titulo">Galeria de Arte</h2>
+    
+                <!-- muuri galeria -->
+    
+                <div class="grid" id="grid">
+
+                    <div class="item"
+                    data-categoria="hechos por mi"
+                    data-etiquetas="hechos por mi jez husky"
+                    data-descripcion="Mi primer dibujo serio de mi fursona y mi primera pfp de discord"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/152_kiro.png" alt="arte">
+                        </div>
+                    </div>
+    
+                    <!-- 2 -->
+                    
+                    <div class="item"
+                    data-categoria="hechos por mi"
+                    data-etiquetas="hechos por mi jez panda rojo"
+                    data-descripcion="Una de mis otras fursonas"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/205_Kiro2.png" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+
+                    <div class="item"
+                    data-categoria="hechos por mi"
+                    data-etiquetas="hechos por mi jez panda rojo"
+                    data-descripcion="Una de mis otras fursonas"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/bg.png" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- overlay -->
+        <section class="overlay" id="overlay">
+			<div class="contenedor-img">
+				<button id="btn-cerrar-popup">X</button>
+				<img src="" alt="">
+			</div>
+			<p class="descripcion"></p>
+		</section>
+    </main>
+
+    <!-- scripts -->
+    <script src="https://kit.fontawesome.com/c88a8a6234.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
