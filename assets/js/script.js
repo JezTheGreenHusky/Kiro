@@ -1,4 +1,47 @@
 window.addEventListener("load", ()=> {
+    let hero_text = document.querySelectorAll(".hero__text");
+
+    let tiempo = 0;
+
+    let loop = (t) => {
+        hero_text.forEach((text, index) => {
+            setTimeout(() => {
+                text.classList.remove("fadeOut");
+                text.classList.add("fadeIn");
+            }, t * 3000);
+    
+            t += 2;
+    
+            setTimeout(() => {
+                text.classList.remove("fadeIn");
+                text.classList.add("fadeOut");
+            }, t * 3000);
+
+            t++
+
+            if(index == hero_text.length - 1){
+                loop(t)
+            }
+        })
+    }
+    
+    loop(0)
+
+
+    // setTimeout(() => {
+    //     hero_text.forEach(text => {
+    //         text.classList.remove("fadeIn");
+    //         text.classList.add("fadeOut");
+    //     });
+    // }, 200);
+
+    // setTimeout(() => {
+    //     hero_text.forEach(text => {
+    //         text.classList.remove("fadeOut");
+    //         text.classList.add("fadeIn");
+    //     });
+    // }, 1200);
+    
     /*======================
     -----------
     GALERIA
@@ -17,36 +60,6 @@ window.addEventListener("load", ()=> {
         grid.refreshItems().layout();
     
         document.getElementById('grid').classList.add('imagenes-cargadas');
-    
-    
-        // Agregamos los listener de los enlaces para filtrar por categoria.
-        const enlaces = document.querySelectorAll('#categorias a');
-        enlaces.forEach((elemento) => {
-            elemento.addEventListener('click', (evento) => {
-                // primero remover la clase "activo" de todos los enlaces
-                evento.preventDefault();
-                enlaces.forEach((enlace) => enlace.classList.remove('activo'));
-                // Luego agregar la clase "activo", cuando se haga click
-                evento.target.classList.add('activo');
-    
-                // obterer la categoria clickeada para el filtrado
-                const categoria = evento.target.innerHTML.toLowerCase();
-                // utilizar el metodo de mmauui: grid.filter
-                // https://github.com/haltu/muuri#grid-method-filter
-    
-                // si categoria == todos: muestra todos (porque todos tienen el atributo data-categoria)
-                // si categoria != todos: filtra la categoria clickeada
-                categoria === 'todos' ? grid.filter('[data-categoria]') : grid.filter(`[data-categoria="${categoria}"]`);
-            });
-        });
-    
-        // Agregamos el listener para la barra de busqueda
-        document.querySelector('#barra-busqueda').addEventListener('input', (evento) => {
-            // obtener el input y ponerlo en una variable
-            const busqueda = evento.target.value.toLowerCase();
-            // filtrar por elemento escrito (input)
-            grid.filter( (item) => item.getElement().dataset.etiquetas.includes(busqueda) );
-        });
     
         // Agregamos listener para las imagenes
         const overlay = document.getElementById('overlay');
