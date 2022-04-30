@@ -1,8 +1,7 @@
 window.addEventListener("load", ()=> {
     let hero_text = document.querySelectorAll(".hero__text");
 
-    let tiempo = 0;
-
+    // transition del css en 2s
     let loop = (t) => {
         hero_text.forEach((text, index) => {
             setTimeout(() => {
@@ -24,8 +23,7 @@ window.addEventListener("load", ()=> {
             }
         })
     }
-    
-    loop(0)
+
 
 
     // setTimeout(() => {
@@ -86,4 +84,5 @@ window.addEventListener("load", ()=> {
     };
     
     modulo_galeria();
+    loop(0)
 });
